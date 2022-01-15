@@ -19,5 +19,15 @@ Two-Pointer
 
 ## Day3
 
+Two-Pointer 
+
 - 167
 - 344 
+- 557
+
+## Day4
+
+Two-Pointer + Linked-List
+
+- 19
+- 876
