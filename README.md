@@ -23,7 +23,7 @@ Two-Pointer
 
 - 167
 - 344 
-- 557
+- 557(byte, string)
 
 ## Day4
 
@@ -37,3 +37,14 @@ Two-Pointer + Linked-List
 bfs
 
 - 733
+
+## Day6
+
+Two-Pointer + Sliding-Window
+
+- 3(string, map)
+
+map
+
+- 268
+- 567
