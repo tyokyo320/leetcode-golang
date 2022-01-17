@@ -5,7 +5,6 @@
  */
 
 // @lc code=start
-
 import "fmt"
 
 func checkInclusion(s1 string, s2 string) bool {
@@ -15,95 +14,58 @@ func checkInclusion(s1 string, s2 string) bool {
 	length1 := len(b1)
 	length2 := len(b2)
 	dict := make(map[byte]int)
+	slidingWindow := make(map[byte]int)
 
-	start := 0
-	end := 0
 	initMap(dict, b1)
+	// s1字符串字符的种类数
+	sCount := len(dict)
+	// sliding-window中字符出现的种类数，当滑动窗口中某个字符个数与s1中对应字符相等时才计数
+	swCount := 0
 
-	for dict[b2[end]] != 1 {
-		// start，end移动到第一个s1存在的字符位置
-		end += 1
-		start += 1
-		continue
-	}
+	left := 0
+	right := 0
 
-	for end < length2 {
-
-		dict[b2[end]] -= 1
-		end += 1
-
-		if isFinished(dict) {
-			return true
-		}
-		if end >= length2 {
-			return false
-		}
-
-		fmt.Printf("start = %d, end = %d\n", start, end)
-		fmt.Println(dict)
-		// fmt.Printf("start: %s, end: %s\n", string(b2[start]), string(b2[end]))
-
-		// 不含s1字符
-		if _, ok := dict[b2[end]]; !ok {
-			end += 1
-			start = end
-			initMap(dict, b1)
-			continue
-		}
-
-		// 含s1字符且重复
-		if _, ok := dict[b2[end]]; ok {
-			if isDuplicate(b2[start], b2[end]) {
-				dict[b2[start]] += 1
-				start += 1
+	// 先让sliding-window的右边界向右移动
+	for right < length2 {
+		// s1中存在的字符才统计
+		if dict[b2[right]] > 0 {
+			// 滑动窗口中出现的字符的频数更新
+			slidingWindow[b2[right]] += 1
+			// 滑动窗口中出现的右边界的次数与s1当中对应的字符频数相等时，计数
+			if slidingWindow[b2[right]] == dict[b2[right]] {
+				swCount += 1
 			}
 		}
+		// 右边界对应读取了字符后移动
+		right += 1
+		// fmt.Println(sCount, swCount)
 
-		// 含s1字符且不重复
-		if _, ok := dict[b2[end]]; ok {
-			if !isDuplicate(b2[start], b2[end]) {
-				if (end - start + 1) == length1 {
-					if isFinished(dict) {
-						return true
-					}
-				} else {
-					fmt.Printf("--- start = %d, end = %d ---\n", start, end)
-					fmt.Println(string(b2[end]))
-					dict[b2[end]] -= 1
-					fmt.Println(dict)
+		// 左边界移动条件：当滑动窗口出现字符的种类数 == s1中字符种类数，并且对应频数相等
+		for sCount == swCount {
+			// fmt.Println(left, right)
+			if right-left == length1 {
+				return true
+			}
+			// s1中存在的字符才统计
+			if dict[b2[left]] > 0 {
+				// 滑动窗口中出现的字符的频数更新
+				slidingWindow[b2[left]] -= 1
+				// 滑动窗口中出现的左边界的次数小于s1当中对应的字符频数时
+				if slidingWindow[b2[left]] < dict[b2[left]] {
+					swCount -= 1
 				}
 			}
-			continue
+			left += 1
 		}
 	}
-	return isFinished(dict)
+	return false
 }
 
-// initMap 将s1字符保存至dict
+// initMap 统计s1字符的频数
 func initMap(dict map[byte]int, b1 []byte) {
 	for _, v := range b1 {
 		dict[v] += 1
 	}
-}
-
-func isDuplicate(a byte, b byte) bool {
-	if a == b {
-		return true
-	} else {
-		return false
-	}
-}
-
-func isFinished(dict map[byte]int) bool {
-	for _, v := range dict {
-		if v <= 0 {
-			continue
-		} else {
-			return false
-		}
-	}
-
-	return true
 }
 
 // @lc code=end
