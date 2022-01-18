@@ -49,3 +49,12 @@ map
 
 - [x] 268
 - [x] 567（字符串的排列）
+
+## Day7
+
+dynamic-programming
+
+- [x] 217（array，map）
+- [x] 53（dynamic-programming）
+
+## Day8
