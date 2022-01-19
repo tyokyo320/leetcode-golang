@@ -58,3 +58,12 @@ dynamic-programming
 - [x] 53（dynamic-programming）
 
 ## Day8
+
+dfs
+
+- [x] 695
+
+array
+
+- [x] 1（array，map）
+- [x] 88 合并2个有序数组（array，Two-Pointer）
