@@ -67,3 +67,15 @@ array
 
 - [x] 1（array，map）
 - [x] 88 合并2个有序数组（array，Two-Pointer）
+
+## Day9
+
+array
+
+- [x] 350 两个数组的交集（array，Two-Pointer）
+- [x] 121 股票最好的买入和卖出时间（dynamic-programming）
+
+## Day10
+
+- [ ] 617
+- [ ] 116

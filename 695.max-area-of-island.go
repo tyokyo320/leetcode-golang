@@ -9,7 +9,7 @@ func maxAreaOfIsland(grid [][]int) int {
 	m := len(grid)
 	n := len(grid[0])
 	maxArea := 0
-	// var cache [m][n]int
+	// 初始化2维数组
 	cache := make([][]int, m)
 	for i, _ := range cache {
 		cache[i] = make([]int, n)
