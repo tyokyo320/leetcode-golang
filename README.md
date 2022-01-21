@@ -61,7 +61,7 @@ dynamic-programming
 
 dfs
 
-- [x] 695
+- [x] 695 最大岛屿面积（初始化二维数组）
 
 array
 
@@ -77,5 +77,13 @@ array
 
 ## Day10
 
+array
+
+- [x] 566 重塑矩阵（二维数组）
+- [x] 118 杨辉三角（dynamic-programming，二维数组）
+
+dfs
+
 - [ ] 617
 - [ ] 116
+
