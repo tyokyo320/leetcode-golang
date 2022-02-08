@@ -90,6 +90,11 @@ array
 
 ## Day12
 
+- [x] 70 爬楼梯（dynamic-programming）
+- [x] 509 斐波那契数（dynamic-programming）
+
+## Day13
+
 array
 
 - [ ] 36 有效的数独
