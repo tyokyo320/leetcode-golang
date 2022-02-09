@@ -4,9 +4,9 @@
 
 binary-search:
 
-- [x] 35
-- [x] 278
-- [x] 704
+- [x] 35 搜索插入位置（二分查找）
+- [x] 278 第一个错误的版本（二分查找）
+- [x] 704 二分查找（二分查找）
 
 ## Day2 
 
@@ -48,7 +48,7 @@ Two-Pointer + Sliding-Window
 map
 
 - [x] 268
-- [x] 567（字符串的排列）
+- [x] 567 字符串的排列（滑动窗口，map）
 
 ## Day7
 
@@ -94,6 +94,10 @@ array
 - [x] 509 斐波那契数（dynamic-programming）
 
 ## Day13
+
+- [x] 392 判断子序列（Two-Pointer）
+
+## Day14
 
 array
 
