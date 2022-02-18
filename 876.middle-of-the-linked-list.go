@@ -23,7 +23,6 @@ func middleNode(head *ListNode) *ListNode {
 	}
 
 	return slow
-
 }
 
 // @lc code=end
