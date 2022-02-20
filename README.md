@@ -52,7 +52,7 @@ map
 
 dynamic-programming
 
-- [x] 217（array，map）
+- [x] 217 存在重复元素（array，map，dynamic-programming）
 - [x] 53（dynamic-programming）
 
 ## Day8
@@ -84,7 +84,6 @@ array
 
 - [x] 387 字符串中的第一个唯一字符（map）
 - [x] 383 赎金信，给2个字符串判罚一方能不能由另一方里面字符组成（map）
-- [x] 242 有效的字母异位词（reflect.DeepEqual()判断两个map是否相同）
 
 ## Day12
 
@@ -166,10 +165,9 @@ array
 
 容器 & 库
 
-- [ ] 1356 根据数字二进制下 1 的数目排序
-- [ ] 232 用栈实现队列
-- [ ] 242 用栈实现队列
-- [ ] 217 存在重复元素
+- [x] 1356 根据数字二进制下 1 的数目排序（sort.Slice()）
+- [x] 232 用栈实现队列
+- [x] 242 有效的字母异位词（reflect.DeepEqual()判断两个map是否相同）
 
 ## Day23
 
