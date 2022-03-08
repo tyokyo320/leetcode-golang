@@ -13,8 +13,6 @@
  * func isBadVersion(version int) bool;
  */
 
-package main
-
 func firstBadVersion(n int) int {
 
 	start := 1

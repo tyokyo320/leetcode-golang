@@ -5,8 +5,6 @@
  */
 
 // @lc code=start
-package main
-
 func search(nums []int, target int) int {
 
 	len := len(nums)
